@@ -16,17 +16,12 @@ def radix_sort(arr):
         # Sujungiame "buckets" atgal į vieną sąrašą
         arr = [num for bucket in buckets for num in bucket]
 
-        # arr = []
-        # for bucket in buckets:
-            # for num in bucket:
-                #arr.append(num)
-
         exp *= 10
 
     return arr
 
 def main():
-    skaiciai = [170, 956, 75, 90, 802, 24, 66, 66]
+    skaiciai = [170, 956, 75, 90, 802, 24, 66, 66, 9999, 100]
     print(radix_sort(skaiciai))
 
 if __name__ == "__main__":
