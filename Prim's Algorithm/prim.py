@@ -33,7 +33,7 @@ def prim(graph):
     return total_weight, mst_edges
 
 def main():
-    # Adjacency matrix (0 reiškia nėra briaunos)
+    # Atstumų matrica
     graph = [
         [0, 2, 3, 0],
         [2, 0, 1, 1],
