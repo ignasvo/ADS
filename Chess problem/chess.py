@@ -40,7 +40,7 @@ def spausdinti_tvarkarasti(tvarkarastis):
     for i, turas in enumerate(tvarkarastis, 1):
         print(f"{i}-as turas:")
         for baltais, juodais in turas:
-            print(f"  Zaidėjas {baltais} (balti) vs Zaidėjas {juodais} (juodi)")
+            print(f"  Zaidejas {baltais} (balti) vs Zaidejas {juodais} (juodi)")
         print()
 
 def main():
