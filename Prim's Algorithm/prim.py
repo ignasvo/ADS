@@ -4,10 +4,10 @@ def prim(graph):
     key = [float('inf')] * n
     parent = [-1] * n
 
-    key[0] = 0  # Pradinis taškas
+    key[0] = 0  # Pradinis taskas
 
     for _ in range(n):
-        # Randame viršūnę su mažiausia key reikšme
+        # Randame virsune su maziausia key reiksme
         min_key = float('inf')
         u = -1
         for v in range(n):
@@ -17,7 +17,7 @@ def prim(graph):
 
         selected[u] = True
 
-        # Atnaujiname kaimynų key reikšmes
+        # Atnaujiname kaimynu key reiksmes
         for v in range(n):
             if graph[u][v] != 0 and not selected[v] and graph[u][v] < key[v]:
                 key[v] = graph[u][v]
@@ -33,7 +33,7 @@ def prim(graph):
     return total_weight, mst_edges
 
 def main():
-    # Atstumų matrica
+    # Atstumu matrica
     graph = [
         [0, 2, 3, 0],
         [2, 0, 1, 1],

@@ -1,13 +1,13 @@
 def sudaryti_tvarkarasti(zaideju_skaicius):
-    # Patikriname ar nelyginis, jei taip – pridedame "bye" (laisvas turas)
+    # Patikriname ar nelyginis, jei taip – pridedame laisvaji zaideja
     yra_nelyginis = (zaideju_skaicius % 2 != 0)
     if yra_nelyginis:
-        zaideju_skaicius += 1  # Pridedame vieną "laisvą" vietą
+        zaideju_skaicius += 1 
 
-    # Sukuriame sąrašą žaidėjų (1...n)
+    # Sukuriame zaideju sarasa
     zaidejai = list(range(1, zaideju_skaicius + 1))
 
-    # Kiek turų reikia?
+    # Turu skaicius
     turu_skaicius = zaideju_skaicius - 1
 
     tvarkarastis = []
@@ -19,11 +19,11 @@ def sudaryti_tvarkarasti(zaideju_skaicius):
             a = zaidejai[i]
             b = zaidejai[zaideju_skaicius - 1 - i]
 
-            # Praleidžiame, jei yra "laisvasis"
+            # Praleidziame poras su laisvuoju zaideju
             if yra_nelyginis and (a == zaideju_skaicius or b == zaideju_skaicius):
                 continue
 
-            # Pakeičiame spalvas pakaitomis kiekviename ture
+            # Pakeiciame balta ir juoda spalvas
             if turas % 2 == 0:
                 poros.append((a, b))  # a – baltais, b – juodais
             else:
@@ -31,7 +31,7 @@ def sudaryti_tvarkarasti(zaideju_skaicius):
 
         tvarkarastis.append(poros)
 
-        # Rotacija: paliekam pirmą, likusius sukame
+        # Rotacija
         zaidejai = [zaidejai[0]] + [zaidejai[-1]] + zaidejai[1:-1]
 
     return tvarkarastis
